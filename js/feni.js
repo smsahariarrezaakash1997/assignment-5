@@ -2,16 +2,16 @@ document
   .getElementById("btn-donation-feni")
   .addEventListener("click", function () {
     const donationAmount = getInputFieldValueById("feni-input-field");
+    const totalBalance = getTextFieldValueById("balance-amount");
     if (isNaN(donationAmount)) {
       alert("Wrong Input");
       return;
     } else {
-      if (donationAmount < 0) {
+      if (donationAmount < 0 || donationAmount > totalBalance) {
         alert("Wrong Input");
         return;
       } else {
         const feniBalance = getTextFieldValueById("feni-donation-amount");
-        const totalBalance = getTextFieldValueById("balance-amount");
         const newDonationAmount = feniBalance + donationAmount;
         const newBalanceAmount = totalBalance - donationAmount;
         document.getElementById("feni-donation-amount").innerText =

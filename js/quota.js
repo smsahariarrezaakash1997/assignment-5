@@ -2,16 +2,16 @@ document
   .getElementById("btn-donation-quota")
   .addEventListener("click", function () {
     const donationAmount = getInputFieldValueById("quota-input-field");
+    const totalBalance = getTextFieldValueById("balance-amount");
     if (isNaN(donationAmount)) {
       alert("Wrong Input");
       return;
     } else {
-      if (donationAmount < 0) {
+      if (donationAmount < 0 || donationAmount > totalBalance) {
         alert("Wrong Input");
         return;
       } else {
         const quotaBalance = getTextFieldValueById("quota-donation-amount");
-        const totalBalance = getTextFieldValueById("balance-amount");
         const newDonationAmount = quotaBalance + donationAmount;
         const newBalanceAmount = totalBalance - donationAmount;
         document.getElementById("quota-donation-amount").innerText =

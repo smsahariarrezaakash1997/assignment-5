@@ -2,18 +2,18 @@ document
   .getElementById("btn-donation-noakhali")
   .addEventListener("click", function () {
     const donationAmount = getInputFieldValueById("noakhali-input-field");
+    const totalBalance = getTextFieldValueById("balance-amount");
     if (isNaN(donationAmount)) {
       alert("Wrong Input");
       return;
     } else {
-      if (donationAmount < 0) {
+      if (donationAmount < 0 || donationAmount > totalBalance) {
         alert("Wrong Input");
         return;
       } else {
         const noakhaliBalance = getTextFieldValueById(
           "noakhali-donation-amount"
         );
-        const totalBalance = getTextFieldValueById("balance-amount");
         const newDonationAmount = noakhaliBalance + donationAmount;
         const newBalanceAmount = totalBalance - donationAmount;
         document.getElementById("noakhali-donation-amount").innerText =
