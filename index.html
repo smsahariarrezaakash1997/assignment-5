@@ -37,7 +37,9 @@
 
           <div class="flex items-center justify-center">
             <img src="images/coin.png" alt="coin" class="mr-3" />
-            <p class="font-bold text-xl"><span>5000</span> BDT</p>
+            <p class="font-bold text-xl">
+              <span id="balance-amount">5000</span> BDT
+            </p>
           </div>
         </div>
       </section>
@@ -61,7 +63,7 @@
           <div>
             <btn class="btn btn-wide">
               <img src="images/coin.png" alt="" />
-              <span id="">0</span> BDT
+              <span id="noakhali-donation-amount">0</span> BDT
             </btn>
 
             <h3 class="text-xl font-bold my-5" id="">
@@ -82,10 +84,16 @@
                 type="text"
                 placeholder="Write Donation Amount"
                 class="input input-bordered w-full mb-5"
+                id="noakhali-input-field"
               />
             </div>
 
-            <button class="btn btn-wide bg-[#b4f461]">Donate</button>
+            <button
+              class="btn btn-wide bg-[#b4f461]"
+              id="btn-donation-noakhali"
+            >
+              Donate
+            </button>
           </div>
         </article>
 
@@ -173,5 +181,7 @@
         </article>
       </section>
     </main>
+    <script src="js/utilities.js"></script>
+    <script src="js/noakhli.js"></script>
   </body>
 </html>
