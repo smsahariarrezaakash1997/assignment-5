@@ -45,13 +45,17 @@
       </section>
 
       <section class="mt-8 mb-10 container mx-auto text-center">
-        <button class="btn bg-[#b4f461] mr-3 text-xl" id="">Donate</button>
-        <button class="btn bg-[#b4f461] mr-3 text-xl" id="">History</button>
+        <button class="btn bg-[#b4f461] mr-3 text-xl" id="show-donate-button">
+          Donation
+        </button>
+        <button class="btn btn-outline mr-3 text-xl" id="show-history-button">
+          History
+        </button>
       </section>
     </header>
 
     <main>
-      <section class="container mx-auto">
+      <section class="container mx-auto" id="donation-form">
         <!-- Noakhali -->
         <article
           class="border rounded-2xl p-5 mb-10 flex flex-col lg:flex-row h-full"
@@ -180,8 +184,13 @@
           </div>
         </article>
       </section>
+
+      <section id="history-form">
+        <h1>Hello History</h1>
+      </section>
     </main>
     <script src="js/utilities.js"></script>
     <script src="js/noakhli.js"></script>
+    <script src="js/toggle.js"></script>
   </body>
 </html>
